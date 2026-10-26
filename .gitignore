@@ -1,0 +1,5 @@
+# Secrets and the session token stay on your machine
+.env
+.session.json
+node_modules/
+.DS_Store

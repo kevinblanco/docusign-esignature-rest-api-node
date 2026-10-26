@@ -1,0 +1,15 @@
+{
+  "name": "docusign-esignature-first-envelope",
+  "version": "1.0.0",
+  "description": "Send your first envelope with the Docusign eSignature REST API: Authorization Code Grant, userinfo, one POST. One file, no SDK, no dependencies.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node send-envelope.js",
+    "status": "node send-envelope.js status",
+    "pdfs": "node tools/make-pdfs.js"
+  }
+}
