@@ -65,7 +65,7 @@ function page(clauses) {
   let y = PAGE.h - 96;
   text(LEFT, y, 20, "F2", "Mutual Non-Disclosure Agreement");
   y -= 22;
-  text(LEFT, y, 9, "F1", "Fontara, Inc.  |  Sample document for the Docusign eSignature REST API tutorial", "0.45 0.42 0.55");
+  text(LEFT, y, 9, "F1", "Fontara, Inc.  |  Sample document for the Docusign eSignature REST API", "0.45 0.42 0.55");
   y -= 34;
   for (const l of wrap(
     "This Mutual Non-Disclosure Agreement (the \"Agreement\") is entered into between Fontara, Inc. (\"Fontara\") and the party signing below (the \"Recipient\"), effective on the date of signature.",
@@ -110,7 +110,7 @@ function pdf(stream) {
     "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>",
     `<< /Length ${Buffer.byteLength(stream, "latin1")} >>\nstream\n${stream}\nendstream`,
   ];
-  // %PDF-1.7 base64-encodes to "JVBERi0xLjcK": the first bytes the tutorial shows
+  // %PDF-1.7 base64-encodes to "JVBERi0xLjcK": the first bytes of documentBase64
   let out = "%PDF-1.7\n%\xe2\xe3\xcf\xd3\n";
   const offsets = [];
   objects.forEach((body, i) => {

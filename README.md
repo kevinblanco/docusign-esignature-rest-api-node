@@ -1,8 +1,8 @@
 # Send your first envelope with the Docusign eSignature REST API
 
-The sample from the tutorial video. It signs in with the Authorization Code
-Grant, finds your account ID and base URI, and sends a PDF for signature in a
-single POST request.
+A sample app that signs in with the Authorization Code Grant, finds your
+account ID and base URI, and sends a PDF for signature in a single POST
+request.
 
 One file ([`send-envelope.js`](send-envelope.js)). No SDK and no dependencies:
 just Node.js and `fetch`.
@@ -134,8 +134,8 @@ npm run status -- <envelopeId> # any envelope
 excludes it, along with `.session.json`, where `npm run status` keeps your
 access token between runs.
 
-IDs in the output are masked like `18b4799a-xxxx-xxxx-xxxx-b5b4b8a97604`, so a
-screen recording doesn't show them whole. Set `MASK_IDS=false` in `.env` to see
+IDs in the output are masked like `18b4799a-xxxx-xxxx-xxxx-b5b4b8a97604`, so
+the output is safe to share or screenshot. Set `MASK_IDS=false` in `.env` to see
 them in full.
 
 ## Resources
@@ -146,3 +146,7 @@ them in full.
 - [eSignature concepts: envelopes, documents, recipients, tabs](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/)
 - [Auto-place (anchor) tabs](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/tabs/auto-place/)
 - [Go-Live](https://developers.docusign.com/platform/go-live/)
+
+## License
+
+MIT. See [LICENSE](LICENSE).

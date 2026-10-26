@@ -2,7 +2,7 @@
 // Send your first envelope with the Docusign eSignature REST API.
 //
 // One file, no SDK, no dependencies: Node.js 20.12+ and its built-in fetch.
-// It follows the tutorial in order:
+// It runs these steps, in order:
 //
 //   1  sign in and approve access          Authorization Code Grant
 //   2  exchange the code for a token       POST /oauth/token
@@ -75,7 +75,7 @@ const step = (n, title) => console.log(`\n${bold(`${n}  ${title}`)}`);
 const line = (...parts) => console.log(`   ${parts.join(" ")}`);
 const ok = (...parts) => line(green("✓"), ...parts);
 
-/** IDs on screen are masked the way Docusign's own docs mask an API Account ID. */
+/** IDs in the output are masked the way Docusign's own docs mask an API Account ID. */
 const maskId = (id) => (CONFIG.maskIds && /^[0-9a-f-]{36}$/i.test(id) ? `${id.slice(0, 8)}-xxxx-xxxx-xxxx-${id.slice(-12)}` : id);
 const maskEmail = (email) => (CONFIG.maskIds ? email.replace(/^(.)[^@]*/, "$1•••") : email);
 
